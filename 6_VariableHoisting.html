@@ -1,0 +1,56 @@
+<script>
+    // VAIABLE HOISTING - We cannot access varibale before it is initialiased eg- var x=2; 
+    // 1. Varible declartion will move to top {Note: Initializing will not move at top like declaration}
+
+    // Case 1
+    console.log(a);
+    var a=10;
+
+    // Case 2
+    var b=10;
+    console.log(b);
+
+    // Case 3
+    var c;
+    console.log(c);
+    c=20;
+
+    //Case 4
+    var d;
+    d=20;
+    console.log(d);
+
+    //Case 5
+    console.log(e);
+    var e;
+    e=30;
+
+    //Case 6
+    var g = 32;
+    console.log(g);
+    var g = 23;
+
+    //EXPLANATION
+
+    // console.log(f);
+    // var f;
+    // f=15;
+
+    //---------   Compiler will see the code like  -----------
+    // var f = undefined;
+    // console.log(f); which is undefined
+    // then initializing value as 15
+    
+
+
+    //EXCEPTIONS
+    console.log(h);
+    let h = 45; 
+
+    console.log(i);
+    const i = 45; 
+
+    // NOTE - Variable Hoisting will work on only Var
+
+
+</script>

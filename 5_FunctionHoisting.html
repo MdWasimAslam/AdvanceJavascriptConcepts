@@ -1,0 +1,28 @@
+<script>
+
+    // Function Hoisting -> Functions are moved at the top of their scope  before code execution
+    // 1. It will work for only function declartion and not for function expressions or Arrow functions
+
+    sum(5, 15) // <-  We have called the function before
+    function sum(a, b) {
+        add = a + b;
+        console.log("Addition : ", add)
+    }
+
+    // sub(10,2)
+    const sub = function (c, d) {
+        let subtr = c - d;
+        console.log("Subtract : ", subtr)
+    }
+    sub(10, 2)
+
+
+    // mul(10, 2)
+    const mul = (e, f) => {
+        let mult = e * f;
+        console.log("Multiplication : ", mult)
+    }
+    mul(10, 2)
+
+
+</script>
