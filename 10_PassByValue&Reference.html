@@ -1,0 +1,30 @@
+<script>
+    //In Pass by Value, Function is called by directly passing the value of the variable as the argument. Changing the argument inside the function doesn’t affect the variable passed from outside the function.
+
+
+    // After changing value for one data it will not reflect in the other variable -Pass by Value
+    let a = 5;
+    let b = a;
+
+    b = b + 5
+    console.log(a);
+    console.log(b);
+
+
+    //In Pass by Reference, Function is called by directly passing the reference/address of the variable as the argument. Changing the argument inside the function affect the variable passed from outside the function. In Javascript objects and arrays follows pass by reference.
+    
+    // After changing value by pass by reference the value gets updated for both objects
+    const obj1 = {
+        user: "thapa",
+        pass: "1234"
+    }
+
+    const obj2 = obj1;
+    obj2.user = "Wasi"
+    console.log(obj1);
+    console.log(obj2);
+
+
+
+
+</script>

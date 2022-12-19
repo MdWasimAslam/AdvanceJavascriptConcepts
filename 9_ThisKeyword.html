@@ -1,0 +1,29 @@
+<script>
+    // THIS KEYWORD REFERS TO THE OBJECT IT BELONGS TO
+
+    // THIS REFERS TO THE GLOBAL OBJECT
+    console.log(this);
+
+    // IN FUNCTION THIS REFERS TO THE GLOBAL OBJECT
+    function sum() {
+        var add = 2 + 2
+        console.log(add);
+        console.log(this);
+    }
+    sum();
+
+    // IN METHOD THIS KEYWORD REFERS TO ITS PARENT OBJECT
+    const fruits = {
+        name: "Mango",
+        sum: function () {
+            var add = 2 + 2
+            console.log(add);
+            console.log(this);
+        }
+
+    }
+    fruits.sum()
+
+
+
+</script>

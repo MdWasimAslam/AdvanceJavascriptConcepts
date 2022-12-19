@@ -1,0 +1,50 @@
+<script>
+    //First Class Citizen Functions - When a function could be treated like any other variable
+
+    // 1. We can assign function to a variable
+    // 2. We can pass function to an object as well
+    // 3. We can pass function as argument
+    // 4. One function can return a function
+
+    // We can assign function to a variable
+    const thankYou = function () {
+        console.log("Thank You");
+    }
+
+
+    thankYou();
+
+
+    // We can pass function to an object as well
+    const youtube = {
+        name: "Thapa",
+        qualif: function () {
+            console.log("MSC");
+        }
+    }
+
+    youtube.qualif()
+
+
+
+    // We can pass function as an argument
+    function myName() {
+        return "Wasi";
+    }
+
+    function Greet(name) {
+        console.log("Hello ", name);
+    }
+    Greet(myName());
+
+
+    // We can return function from a function
+    function abc(){
+        return function xyz(){
+            console.log("Return Function");
+        }
+    }
+
+    abc()();
+    
+</script>
