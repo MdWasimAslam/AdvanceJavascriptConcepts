@@ -1,0 +1,21 @@
+<script>
+  //VAR IS FUNCTION SCOPED
+  // LET & CONST ARE BLOCK SCOPED
+
+  //   Case 1 - We cannot reassign value of const
+  // const val1 = 2;
+  // val1=3;
+  // console.log(val1);
+
+  // Case 2- Var is a function scope
+
+  function abc() {
+    // var a is a blocked scoped variable
+    var a = 12;
+    console.log(a);
+  }
+  abc();
+  // We can recreate that variable again
+  var a = 10;
+  console.log(a);
+</script>
