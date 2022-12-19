@@ -1,0 +1,25 @@
+<script>
+    // BIND METHOD - we can bind an object with a common function, so that function gives different result as needed 
+
+    const obj1 = {
+        content: "Programming",
+        feature: function (name) {
+            console.log("Name :" + name + "\ncontent : " + this.content);
+        }
+    }
+    let obj2 = obj1.feature.bind(obj1)  // Creating a function from a object method
+    obj2('Tha') // Calling our new function 
+
+
+
+    // Binding a common function with an object 
+    const demo1 = {
+        content: "VLOG"
+    }
+
+    function desp(name) {
+        console.log("Name :" + name + "\ncontent : " + this.content);
+    }
+    let you1 = desp.bind(demo1)
+    you1("Wasi")
+</script>

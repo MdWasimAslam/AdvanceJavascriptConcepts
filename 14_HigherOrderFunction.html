@@ -1,0 +1,18 @@
+<script>
+//Higher Order Function - Function taking a function as argument and return a functio as result
+
+
+const exam = (student)=>{
+    return function(question){
+        console.log(`${student} assigned to ${question}`);
+    }
+}
+
+// Sending Function as argument
+exam('Wasi')('What is a callback function?')
+exam('Raju')('What is a IIFI?')
+
+
+
+
+</script>

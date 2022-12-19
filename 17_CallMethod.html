@@ -1,0 +1,20 @@
+<script>
+    //Call Method - With Call Method One Object can use method belonging to another object
+
+    const youtuberOne = {
+        name: "Thapa",
+        //DEFINING METHOD 
+        desc: function (rating,description) {
+            console.log("Description : " + description + "\nName : "+ this.name + "\nRating : " + rating);
+        }
+    }
+
+    const youtuberTwo = {
+        name: "Wasi",
+    }
+
+
+
+    youtuberOne.desc(5,"Coding Channel")
+    youtuberOne.desc.call(youtuberTwo, 8,"Vlogger")
+</script>

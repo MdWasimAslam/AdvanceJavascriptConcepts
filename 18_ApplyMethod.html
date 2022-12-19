@@ -1,0 +1,21 @@
+<script>
+    //Apply Method - With Apply Method One Object can use method belonging to another object.
+    // Apply method is same as call method it just takes argument in array
+
+    const youtuberOne = {
+        name: "Thapa",
+        //DEFINING METHOD 
+        desc: function (rating,description) {
+            console.log("Description : " + description + "\nName : "+ this.name + "\nRating : " + rating);
+        }
+    }
+
+    const youtuberTwo = {
+        name: "Wasi",
+    }
+
+
+
+    youtuberOne.desc(3,"Coding Channel")
+    youtuberOne.desc.apply(youtuberTwo,[4,"Vlogger"])
+</script>
