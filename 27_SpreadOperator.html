@@ -1,0 +1,63 @@
+<script>
+
+//SPREAD OPERATOR -
+// It is used to concat two arrays
+// It is used to pass array values inside function as parameters or object method's parameter
+// It is used to copy an array without any effects on first array
+
+
+
+
+    console.log("------- It replaces Apply Method -----");
+    // 1. It replaces Apply Method - It can send array as a parameter to a existing object method
+
+    function sum(a, b, c) {
+        console.log(a + b + c);
+    }
+
+    var ArrValue = [7, 2, 1]
+    sum.apply(null, ArrValue)
+
+    // With Spread Operator
+    sum(...ArrValue) // With spread
+    console.log("SpeadOperator Value", ...ArrValue);
+
+
+
+    console.log("------- It replaces Concat Method -----");
+    // 2. It Replaces Concat Method
+
+    let arr1 = [1, 2, 3];
+    let arr2 = [4, 5, 6];
+
+    // arr1 = arr1.concat(arr2);
+    // console.log(arr1);
+
+
+    // With Spread Operator
+
+    arr1 = [...arr1, ...arr2];
+    console.log(arr1);
+
+
+
+    console.log("------- It replaces Copy Method -----");
+
+    // 3 . It replaces Copy method
+
+    let arrCopy1 = [1, 2, 3];
+    let arrCopy2 = arrCopy1;
+
+    arrCopy2.push(4, 5)
+    console.log(arrCopy2);
+    console.log(arrCopy1); // HERE THE VALUE IS OVERRIDEN BY NEW VALUE FOR ORIGINAL ARRAY AS WELLL
+
+    console.log("----------------");
+    let arrC1 = [1, 2, 3]
+    let arrC2 = [...arrC1]
+
+    //The new value will not override the original previous array like it happens in concat method
+    arrC2.push(5, 6)
+    console.log(arrC2);
+    console.log(arrC1);
+</script>

@@ -1,0 +1,52 @@
+<script>
+
+// Rest Parameters - It can take infinite parameters 
+
+    //----- Why it is needed ? -----
+
+    function sum(a, b) {
+        console.log(a + b);
+    }
+
+    sum(1, 2, 3, 4, 5, 6, 7) // It will take first two parameters and then it will ignore all the other parameters in the function call
+
+   
+   
+    // ------ Example 1 ------
+
+    function getTotalSum(...inputs) {
+        console.log(inputs); // This will return array of all parameters
+        console.log(...inputs); // This will return direct values of all parameters 
+
+        let total = 0;
+        for (const i of inputs) {
+            // console.log(i);
+            total = total + i
+
+        }
+        console.log("Total Sum :", total);
+
+
+    }
+
+    getTotalSum(20,56,64,78,82)
+
+
+
+console.log("--------------------------------");
+    //--- Example 2 ------
+
+
+    function example2(a,b,...c){
+        console.log(a);
+        console.log(b);
+        console.log("Value of C",c);
+        console.log("c[1] Value : ",c[1]);
+        console.log("Length : ",c.length);
+        console.log(" All Values :",...c);
+    }
+
+
+    example2(1,2,3,4,5,6,4,5,6)
+
+</script>

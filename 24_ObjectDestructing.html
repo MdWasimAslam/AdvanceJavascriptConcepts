@@ -1,0 +1,68 @@
+<script>
+    // Destructing is a property by which we can unpack object /array and store them into distint variable
+    // 1. Make sure that the variable and the object name is same 
+
+
+    console.log("-------------------  EXAMPLE 1 ---------------------------");
+    // ---- 1st Way ----- RECOMMENDED
+    const bioData = {
+        name: "Wasim",
+        age: 26,
+        deg: "MCA"
+    }
+    console.log(bioData.name); // Normal way of fetching a data from an object
+
+
+    let { name, age, deg } = bioData // Destructing or simply storing  datas into variable in a proper order wise
+
+
+    console.log("--------------------- CUSTOM VARIABLE NAME ---------------------------");
+    // -- Declare Custom Variable name 
+
+    demoObject = {
+        fruit1: "Mango",
+        fruit2: "Banana",
+        fruit3: "Orange"
+    }
+
+    // let {fruit1,fruit2,fruit3} = demoObject;
+    // console.log(fruit1);
+
+    let { fruit1: myVariableName, fruit2, fruit3 } = demoObject;
+    console.log(myVariableName);
+
+    console.log("-------------------  EXAMPLE 2 ----------------------------");
+    // Fetching Value from child object 
+    carObject = {
+        brand: "Lamborghini",
+        Models: {
+            model_1: "Huracan",
+            model_2: "Veneno",
+            model_3: "Countach"
+        }
+    }
+
+    const { brand, Models } = carObject
+    console.log(brand, Models.model_1);
+
+
+
+
+    console.log("------------------------------------------------");
+
+    // ----- 2nd Way ----- NOT RECOMMENDED
+    const student = {
+        roll: 1,
+        standard: 12,
+        section: "A"
+    }
+
+    let roll, standard, section;
+    ({ roll, standard, section } = student)
+
+    console.log(roll)
+
+
+
+
+</script>

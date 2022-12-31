@@ -1,0 +1,38 @@
+<script>
+
+    /*
+    In JavaScript, a promise is an object that represents the result of an asynchronous operation.
+    
+    A promise has three states: pending, fulfilled, and rejected. When a promise is first created, it is in the pending state. This means that the asynchronous operation is still in progress.
+    
+    Once the asynchronous operation is complete, the promise will either be fulfilled or rejected. If the operation was successful, the promise will be fulfilled, and the result of the operation will be passed to the promise's "resolve" function. If the operation was not successful, the promise will be rejected, and the reason for the failure will be passed to the promise's "reject" function.
+    */
+
+    const myPromise = new Promise((resolve, reject) => {
+        // Do something asynchronous
+        const fakeAPI_Data = {
+            name: "Wasim",
+            age: 26,
+            school: "Harrow Hall",
+            degree: "MCA"
+        }
+
+        console.log("Fetching API ....");
+        setTimeout(() => {
+            if (fakeAPI_Data) {
+                resolve(fakeAPI_Data);
+            } else {
+                reject("Error!");
+            }
+        }, 3000);
+    });
+
+    myPromise.then((result) => {
+        console.log(result);
+    }).catch((error) => {
+        console.error(error);
+    });
+
+
+
+</script>

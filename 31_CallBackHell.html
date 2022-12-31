@@ -1,0 +1,42 @@
+<script>
+
+//Callback hell is a term used to describe situations where a program has a lot of nested callback functions, which can make the code difficult to read and understand.
+
+
+
+    const getRollApi = () => {
+        console.log("Getting Roll No. from Api ......");
+        setTimeout(() => {
+            let roll_No = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            console.log("All Roll Numbers :",roll_No);
+
+
+            setTimeout((rollNoParam) => {// Accessing the parameter rom here
+                console.log("Roll No : ",rollNoParam); // Printing the parameter from here
+                let name = ['wasi', 'karen']
+
+                setTimeout((nameParam) => {
+                    console.log("Name : ",nameParam);
+                    let school = "Harrow Hall"
+                    setTimeout((schoolParam) => {
+                        console.log("School :",schoolParam);
+                        console.log("Getting ALL ROLL from the inner most child",roll_No);
+                    }, 3000,school);
+
+
+
+                }, 3000, name[0]);
+
+
+            }, 3000, roll_No[1]); // Passing Specific Roll No as parameter in set timeout
+
+        }, 3000);
+
+    }
+
+    getRollApi()
+
+
+
+
+</script>

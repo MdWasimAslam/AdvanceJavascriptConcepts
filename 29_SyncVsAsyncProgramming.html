@@ -1,0 +1,24 @@
+<script>
+    
+    // The main difference between ASYNC AND SYNC IS SYNC PROGRAMMING EXECUTES LINE BY LINE  BUT ASYNC PROGRAMMING EXECUTES AS PER USERS WILL
+
+
+    function func1(){
+        console.log("Function 1 Starting");
+        func2()
+        console.log("Function 1 Ending");
+
+    }
+
+    function func2(){
+        console.log("Function 2 Starting");
+        setTimeout(() => {
+            console.log("function 2 Ending");
+        }, 3000);
+    }
+
+    func1()
+
+
+
+</script>
