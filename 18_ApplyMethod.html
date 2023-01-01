@@ -2,6 +2,8 @@
     //Apply Method - With Apply Method One Object can use method belonging to another object.
     // Apply method is same as call method it just takes argument in array
 
+    console.log("------------------ EXAMPLE 1 -------------------------");
+
     const youtuberOne = {
         name: "Thapa",
         //DEFINING METHOD 
@@ -18,4 +20,24 @@
 
     youtuberOne.desc(3,"Coding Channel")
     youtuberOne.desc.apply(youtuberTwo,[4,"Vlogger"])
+
+    console.log("------------------ EXAMPLE 2 -------------------------");
+
+    const bmw ={
+        name:"Z4",
+        year:2015,
+        feature: function (color) {
+                console.log(`Model: ${this.name}\nYear: ${this.year}\nColor: ${color}`);
+            }
+    }
+    //Calling the method of the object
+    bmw.feature('grey')
+
+
+    const audi={
+        name:"A4",
+        year:2016
+    }
+    bmw.feature.apply(audi,["Lemon"]) //It will take parameter as array
+
 </script>

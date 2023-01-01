@@ -23,5 +23,20 @@
     let you1 = desp.bind(demo1);
     you1("Wasi");
 
-    
+    console.log("------------ EXAMPLE 2 -------------");
+
+    const bmw ={
+        name:"530i",
+        year:2022
+    }
+
+    function feature(color){
+        console.log(`Model: ${this.name}\nYear: ${this.year}\nColor: ${color}`);
+    }
+
+    //Binding function with object so that we can call it like a method
+    const myCar = feature.bind(bmw);
+    myCar('Red')
+
+
 </script>
