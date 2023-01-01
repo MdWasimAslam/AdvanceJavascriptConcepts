@@ -1,5 +1,6 @@
 <script>
     //Call Method - With Call Method One Object can use method belonging to another object
+    console.log("------------------ EXAMPLE 1 -------------------------");
 
     const youtuberOne = {
         name: "Thapa",
@@ -17,4 +18,26 @@
 
     youtuberOne.desc(5,"Coding Channel")
     youtuberOne.desc.call(youtuberTwo, 8,"Vlogger")
+
+
+console.log("------------------ EXAMPLE 2 -------------------------");
+        const Bmw = {
+            name: "320d M Sports",
+            year: 2017,
+
+            feature: function (color) {
+                console.log(`Model: ${this.name}\nYear: ${this.year}\nColor: ${color}`);
+            }
+        }
+        //Calling 1st Object through its method
+        Bmw.feature('red')
+
+        const Audi = {
+            name: "A4",
+            year: 2018
+        }
+        // Using first object's method with a new object
+        Bmw.feature.call(Audi, 'yellow')
+
+
 </script>
