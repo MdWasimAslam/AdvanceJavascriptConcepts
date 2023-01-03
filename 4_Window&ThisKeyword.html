@@ -1,8 +1,25 @@
 <script>
-/*  Javascript creates a global execution context for an empty js file as well.
-    Window is actually a global object created when the Global execution context is created
-     At global level this keyword point at the window object of javascript
-     i.e this === window 
-     
-*/
+    /*  Javascript creates a global execution context for an empty js file as well.
+        Window is actually a global object created when the Global execution context is created
+         At global level this keyword point at the window object of javascript
+         i.e this === window 
+         
+         Anycode which is not inside a function is in a global space
+    */
+    var a = 10;
+
+    // This all will refer to variable a
+    console.log(window.a);
+    console.log(this.a);
+    console.log(a);
+
+    // Inside a object this keyword refers to the varibale inside its scope
+    const myObj = {
+        name: "wasim",
+        myMethod: function () {
+            console.log(this.name);
+        }
+    }
+    console.log(myObj.name);
+    myObj.myMethod()
 </script>
