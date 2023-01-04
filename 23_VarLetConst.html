@@ -2,7 +2,7 @@
   //VAR IS FUNCTION SCOPED
   // LET & CONST ARE BLOCK SCOPED
 
-  //   Case 1 - We cannot reassign value of const
+  // Case 1 - We cannot reassign value of const
   // const val1 = 2;
   // val1=3;
   // console.log(val1);
@@ -18,4 +18,29 @@
   // We can recreate that variable again
   var a = 10;
   console.log(a);
+
+
+  //-----------------------------------------------------------------------
+
+  // TEMPORAL DEAD ZONE - The time between the variable is hoisted and it is initialised some value
+  //              Whenever you try to access a varible which is inside temporal dead zone it gives reference error 
+  // console.log(val); // This will give reference error
+  let val = 10;
+
+
+  // You cannot declare a const variable without a value
+  // const a; You cannot initialise like this. But it works for let and var
+  // a=10
+
+
+  /*
+    SHADOWING IN JAVASCRIPT
+   -> If we declare a VAR varibale in a global scope and another varibable inside a block scope with same name the block variable will override the value to global scope as well.
+  */
+   var ab = 100;
+  {
+    var ab = 10
+    console.log(ab);
+  }
+  console.log(ab);
 </script>
