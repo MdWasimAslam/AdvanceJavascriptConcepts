@@ -31,7 +31,7 @@
         function y() {
             console.log(a);
         }
-        a=60; // The variable is reassigned with a new value before the return statement hence the function can access it in its lexical scope
+        // a=60; // The variable is reassigned with a new value before the return statement hence the function can access it in its lexical scope
         return y;
         a=100; // This is assigned after the function is returned so the func will not have access to his updated code
     }
