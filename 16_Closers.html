@@ -10,7 +10,7 @@
 
 
     // Closure is a state where inner function can access outer function variable and parameters and also the global variables
-
+    // a closure is a function that remembers and continues to access the variables of its lexical scope even when that function is executing outside its lexical scope. This is possible because functions in JavaScript have access to the scope chain, which is a list of all the nested scopes that are in effect for the function.
  
     let e = 19;
     function outer(d) {
@@ -22,7 +22,19 @@
     }
     outer(5)
 
+console.log("-----------------");
+//EXAMPLE 2
+function x(){
+    var a=7;
+    function y(){
+        console.log(a);
+    }
+    return y;
+}
 
+var z = x();
+console.log(z); // This will return function
+z();  // This will return 7 because it remembers the varibale of its scope even if the function is executing outside
 
 
 </script>
