@@ -1,0 +1,26 @@
+<script>
+
+    //The reduce function in JavaScript is used to take an array of items, and combine them together into a single value. It's similar to a loop where you take the first item in the array, 
+
+    let numbers = [1, 2, 3, 4, 5];
+    let sum = numbers.reduce(function (accumulator, currentNumber) {
+        return accumulator + currentNumber;
+    });
+
+    //let sum = numbers.reduce((a, b) => a + b);   <- We can write like this as well
+
+    console.log(sum);
+
+
+
+    //--------------------------------------------------------------
+    let words = ["I", "am", "a", "learning", "AI"];
+    let concatenatedString = words.reduce(function (acc, curr) {
+        return acc + " " + curr;
+    });
+    // let concatenatedString = words.reduce((a, b) => a + " " + b);  <- We can write like this as well
+
+    console.log(concatenatedString);
+
+
+</script>
