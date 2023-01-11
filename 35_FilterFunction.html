@@ -1,0 +1,43 @@
+<script>
+    //The filter function in JavaScript is similar to the map function, but instead of changing the items in an array, it's used to pick out certain items from an array based on some condition.
+    //You can use filter function to filter any array of elements based on any condition.
+
+
+
+    const fruits = ["mango", "apple", "banana", "grapes", "strawberry"];
+    const getAllFruits = fruits.filter((fruitName) => fruitName)
+    console.log(getAllFruits);
+
+    //-------------------------------------------------------------------
+
+    const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    const evenNumbers = arr.filter(function (number) {
+        return number % 2 == 0;
+    });
+
+    console.log(evenNumbers);
+
+    //-----------------------------------------------------------
+
+
+    let words = ["apple", "banana", "cat", "dog", "elephant", "lion"];
+    let fourLetterWords = words.filter(function (word) {
+        return word.length === 4; //return the elemetn whose length is equals to 4
+    });
+
+    // We can write the same statement like this as well
+    // let fourLetterWords = words.filter(word => word.length === 4); 
+
+    console.log(fourLetterWords);
+
+    //--------------------------------------------------------------------
+
+
+    const myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    const filteredArrayResult = myArray.filter((num) => num > 3)
+    console.log(filteredArrayResult);
+
+    //--------------------------------------------------------------------
+
+</script>
