@@ -25,4 +25,18 @@
     });
 
     console.log(tripleNum);
+
+const users = [
+    {fName:"Paul",lName:"Alen",age:23},
+    {fName:"Peter",lName:"Kiloski",age:32},
+    {fName:"Johhny",lName:"English",age:45},
+    {fName:"Steve",lName:"Roggers",age:67},
+    {fName:"Anastesia",lName:"Grey",age:14},
+    {fName:"Jimmy",lName:"Choo",age:26}
+];
+
+
+const getFullName = users.map((element)=>element.fName +element.lName)
+console.log(getFullName);
+
 </script>
