@@ -1,0 +1,28 @@
+<script>
+    //JavaScript's map function is a built-in method that helps you manipulate an array of items, it allows you to loop through all the items of an array and perform a specific operation on each of them, then it gives you a new array as a result with all the modified items.
+
+    const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    const getValues = arr.map((x) => {
+        return x;
+    });
+    console.log(getValues);
+
+    //-----------------------------------------------------------
+
+    // This will double the values of the array using that function
+    function doubleValues(x) {
+        return x * 2;
+    }
+    const doubleNums = arr.map(doubleValues);
+    console.log(doubleNums);
+
+    //-----------------------------------------------------------
+
+    // We can pass a function directly like this as well it will work fine
+    const tripleNum = arr.map((x) => {
+        return x * 3
+    });
+
+    console.log(tripleNum);
+</script>
